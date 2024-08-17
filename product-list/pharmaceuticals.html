@@ -288,7 +288,11 @@
         outline: none; 
         border: none;
       }
-
+ .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            width: 100%;
+        }
       table {
       width: 100%;
       border-collapse: collapse;
@@ -377,7 +381,8 @@
             window.location.href = '/product-full-detail.html?row=' + rowId;
         }
 </script>
-    <table id="medTable" border="0" cellpadding="0" cellspacing="0" style="width:83%; display:flexbox; overflow-x:scroll;">
+<div class="table-container">
+  <table id="medTable" border="0" cellpadding="0" cellspacing="0" style="width:83%; display:flexbox; overflow-x:scroll;">
         <thead>
           <tr>
             <th style="text-align: center; font-size: 18px;">Sr.No.</th>
@@ -887,6 +892,8 @@
          
         </tbody>
       </table>
+</div>
+  
       
   
 
