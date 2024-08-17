@@ -460,7 +460,7 @@ html {
 
 .location-tab.active {
     color: red;
-    border-bottom: 2px solid red;
+    
 }
 
 .location-tab:not(.active)::after {
