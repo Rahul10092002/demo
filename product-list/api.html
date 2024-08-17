@@ -9,21 +9,134 @@
 </head>
 
 <body>
-  <div class="div-nav">
-    <div class="div-2-nav">
-      <img loading="lazy" src="/asset/img/nav-logo.png" class="img-nav" />
-      <div class="div-3-nav">
-        <div class="div-4-nav"><a href="/index.html">Home</a></div>
-        <div class="div-5-nav"><a href="/index.html#about-us">About Us</a></div>
-        <div class="div-6-nav">
-          <div class="div-7-nav"><a href="/product.html">Products</a></div>
-         
-        </div>
-        <div class="div-8-nav"><a href="/career.html">Career</a></div>
-      </div>
-      <div class="div-9-nav"><a href="/index.html#contact-us">Contact</a></div>
-    </div>
-  </div>
+  <header class="header">
+        <nav class="navbar">
+            <a href="/index.html" class="nav-logo">
+                <img loading="lazy" src="/asset/img/nav-logo.png" class="img-nav" alt="Logo" />
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-menu">
+                <div class="nav-item"><a href="#" class="nav-link">Home</a></div>
+                <div class="nav-item"><a href="#about-us" class="nav-link">About Us</a></div>
+                <div class="nav-item"><a href="/product.html" class="nav-link">Products</a></div>
+                <div class="nav-item"><a href="/career.html" class="nav-link">Career</a></div>
+                <div class="nav-item"><a href="#contact-us" class="nav-link">Contact</a></div>
+            </div>
+        </nav>
+    </header>
+    <style>
+      
+.header {
+    border-bottom: 1px solid #E2E8F0;
+    background-color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.img-nav {
+    width: 120px; /* Adjust width as needed */
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-item {
+    margin: 10px 0;
+}
+
+.nav-link {
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #482ff7;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        
+        flex-direction: column;
+        background-color: #fff;
+        /* background-color: #222; */
+        width: 100%;
+       z-index: 2;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+        width: 100vw;
+        gap: 0px;
+    }
+
+
+    .nav-item {
+     gap: 0px;
+        cursor: pointer; 
+        text-decoration: underline;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+    </style>
 
   <style>
     .container-main {
@@ -289,6 +402,14 @@
         border: none;
       }
 
+       .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
       table {
         width: 100%;
         border-collapse: collapse;
@@ -358,7 +479,7 @@
     </style>
 
 
-
+<div class="table-container">
 <table border="0" cellpadding="0" cellspacing="1" style="width:83%; display: flexbox;">
   <tr>
     <th style="text-align: center; font-size: 18px; width: 9%;">Sr.No</th>
@@ -478,6 +599,8 @@
   <tr><td>112</td><td>Topiramate</td></tr>
   <tr><td>113</td><td>Venlafaxine</td></tr>
 </table>
+</div>
+
 
 
 
@@ -3279,7 +3402,7 @@
       flex-basis: auto;
     }
   </style>
-
+<script src="/asset/js/index.js"></script>
 </body>
 
 </html>

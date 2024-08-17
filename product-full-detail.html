@@ -6,6 +6,7 @@
    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/asset/img/icon.png">
+  <link rel="stylesheet" href="/asset/css/main.css" />
 </head>
 <style>
   .tab.selected {
@@ -31,26 +32,25 @@
 </style>
 
 <body>
-  <div class="div-nav">
-    <div class="div-2-nav">
-      <img loading="lazy"
-        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&"
-        class="img-nav" />
-      <div class="div-3-nav">
-        <div class="div-4-nav"><a href="/index.html">Home</a></div>
-        <div class="div-5-nav"><a href="/index.html#about-us">About Us</a></div>
-        <div class="div-6-nav">
-          <div class="div-7-nav"><a style="color: #333;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;" href="/product.html">Products</a></div>
-
-        </div>
-        <div class="div-8-nav"><a href="/career.html">Career</a></div>
-      </div>
-      <div class="div-9-nav"><a href="/index.html#contact-us">Contact</a></div>
-    </div>
-  </div>
+  <header class="header">
+        <nav class="navbar">
+            <a href="/index.html" class="nav-logo">
+                <img loading="lazy" src="/asset/img/nav-logo.png" class="img-nav" alt="Logo" />
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-menu">
+                <div class="nav-item"><a href="#" class="nav-link">Home</a></div>
+                <div class="nav-item"><a href="#about-us" class="nav-link">About Us</a></div>
+                <div class="nav-item"><a href="/product.html" class="nav-link">Products</a></div>
+                <div class="nav-item"><a href="/career.html" class="nav-link">Career</a></div>
+                <div class="nav-item"><a href="#contact-us" class="nav-link">Contact</a></div>
+            </div>
+        </nav>
+    </header>
   <style>
     * {
       box-sizing: border-box;
@@ -2122,6 +2122,7 @@
       changeImage(newSrc);
     }
   </script>
+    <script src="/asset/js/index.js"></script>
   <script src="/asset/js/products-details-data.js"></script>
 </body>
 

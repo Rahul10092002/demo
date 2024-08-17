@@ -6,24 +6,29 @@
   <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="icon" type="image/png" href="/asset/img/icon.png">
+ <link rel="stylesheet" href="/asset/css/main.css" />
 </head>
 
 <body>
-  <div class="div-nav">
-    <div class="div-2-nav">
-      <img loading="lazy" src="/asset/img/nav-logo.png" class="img-nav" />
-      <div class="div-3-nav">
-        <div class="div-4-nav"><a href="/index.html">Home</a></div>
-        <div class="div-5-nav"><a href="/index.html#about-us">About Us</a></div>
-        <div class="div-6-nav">
-          <div class="div-7-nav"><a href="/product.html">Products</a></div>
-         
-        </div>
-        <div class="div-8-nav"><a href="/career.html">Career</a></div>
-      </div>
-      <div class="div-9-nav"><a href="/index.html#contact-us">Contact</a></div>
-    </div>
-  </div>
+      <header class="header">
+        <nav class="navbar">
+            <a href="/index.html" class="nav-logo">
+                <img loading="lazy" src="/asset/img/nav-logo.png" class="img-nav" alt="Logo" />
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-menu">
+                <div class="nav-item"><a href="#" class="nav-link">Home</a></div>
+                <div class="nav-item"><a href="#about-us" class="nav-link">About Us</a></div>
+                <div class="nav-item"><a href="/product.html" class="nav-link">Products</a></div>
+                <div class="nav-item"><a href="/career.html" class="nav-link">Career</a></div>
+                <div class="nav-item"><a href="#contact-us" class="nav-link">Contact</a></div>
+            </div>
+        </nav>
+    </header>
   <style>
     .container-main {
       display: flex;
@@ -372,7 +377,7 @@
             window.location.href = '/product-full-detail.html?row=' + rowId;
         }
 </script>
-    <table id="medTable" border="0" cellpadding="0" cellspacing="0" style="width:83%; display:flexbox;">
+    <table id="medTable" border="0" cellpadding="0" cellspacing="0" style="width:83%; display:flexbox; overflow-x:scroll;">
         <thead>
           <tr>
             <th style="text-align: center; font-size: 18px;">Sr.No.</th>
@@ -1422,6 +1427,7 @@
       background-color: #fff;
       display: flex;
       flex-direction: column;
+
       align-items: center;
     }
 
@@ -1437,6 +1443,10 @@
     }
 
     @media (max-width: 991px) {
+      .div{
+        width: 100vw;
+        overflow-x: scroll;
+      }
       .div-2 {
         max-width: 100%;
         padding: 0 20px;
@@ -1636,7 +1646,7 @@
       border-radius: 30px 30px 0px 0px;
       background-color: #3e4095;
       display: flex;
-      margin-top: 200px;
+      margin-top: 20px;
       width: 1600px;
       max-width: 83%;
       flex-direction: column;
@@ -1648,6 +1658,7 @@
       .div-17 {
         margin-top: 40px;
         padding: 0 20px;
+        width: 100vw;
       }
     }
 
@@ -3683,7 +3694,7 @@
       flex-basis: auto;
     }
   </style>
-
+<script src="/asset/js/index.js"></script>
 </body>
 
 </html>

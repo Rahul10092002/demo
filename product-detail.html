@@ -3,29 +3,30 @@
 
 <head>
   <title>Product Detail</title>
+  <link rel="stylesheet" href="/asset/css/main.css" />
+  
 </head>
 
 <body>
-  <div class="div-nav">
-    <div class="div-2-nav">
-      <img loading="lazy" src="/asset/img/nav-logo.png" class="img-nav" />
-      <div class="div-3-nav">
-        <div class="div-4-nav"><a href="#">Home</a></div>
-        <div class="div-5-nav"><a href="/about.html">About Us</a></div>
-        <div class="div-6-nav">
-          <div class="div-7-nav">Products</div>
-          <img loading="lazy" src="/asset/img/drop-down-arrow.png" class="img-2-nav" />
-          <div class="submenu-nav">
-            <div class="submenu-item"><a href="/product.html">Product 1</a></div>
-            <div class="submenu-item"><a href="/product-detail.html">Product 2</a></div>
-            <div class="submenu-item"><a href="/product-detail.html">Product 3</a></div>
-          </div>
-        </div>
-        <div class="div-8-nav"><a href="/career.html">Career</a></div>
-      </div>
-      <div class="div-9-nav"><a href="#contact-us">Contact</a></div>
-    </div>
-  </div>
+   <header class="header">
+        <nav class="navbar">
+            <a href="/index.html" class="nav-logo">
+                <img loading="lazy" src="/asset/img/nav-logo.png" class="img-nav" alt="Logo" />
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-menu">
+                <div class="nav-item"><a href="#" class="nav-link">Home</a></div>
+                <div class="nav-item"><a href="#about-us" class="nav-link">About Us</a></div>
+                <div class="nav-item"><a href="/product.html" class="nav-link">Products</a></div>
+                <div class="nav-item"><a href="/career.html" class="nav-link">Career</a></div>
+                <div class="nav-item"><a href="#contact-us" class="nav-link">Contact</a></div>
+            </div>
+        </nav>
+    </header>
 
   <style>
     .container-main {
@@ -3304,7 +3305,7 @@
       flex-basis: auto;
     }
   </style>
-
+  <script src="/asset/js/index.js"></script>
 </body>
 
 </html>

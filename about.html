@@ -2,212 +2,30 @@
 <html>
     <head>
         <title>About</title>
+        <link rel="stylesheet" href="/asset/css/main.css" />
     </head>
     <body>
 
       <!--Header Start -->
-      <div class="div-nav">
-        <div class="div-2-nav">
-          <img loading="lazy"
-            srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/ffce1c2da37b1f97e614f299a86a3f6bc029dd0b00cec1678561e14ab2de1777?apiKey=38bd2698e0e84fa6b8fdaf8526e9946f&"
-            class="img-nav" />
-          <div class="div-3-nav">
-            <div class="div-4-nav"><a href="/index.html">Home</a></div>
-            <div class="div-5-nav"><a href="/about.html">About Us</a></div>
-            <div class="div-6-nav">
-              <div class="div-7-nav">Products</div>
-              <img loading="lazy"
-              src="/asset/img/drop-down-arrow.png" 
-              class="img-2-nav" />
-              <div class="submenu-nav">
-                <div class="submenu-item"><a href="/product.html">Product 1</a></div>
-                <div class="submenu-item"><a href="/product-detail.html">Product 2</a></div>
-                <div class="submenu-item"><a href="/product-detail.html">Product 3</a></div>
-              </div>
+       <header class="header">
+        <nav class="navbar">
+            <a href="/index.html" class="nav-logo">
+                <img loading="lazy" src="/asset/img/nav-logo.png" class="img-nav" alt="Logo" />
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-            <div class="div-8-nav"><a href="/career.html">Career</a></div>
-          </div>
-          <div class="div-9-nav"><a href="index.html#contact-us">Contact</a></div>
-        </div>
-      </div>
-      
-      <style>
-        * {
-          box-sizing: border-box;
-        }
-    
-        body {
-          margin: 0;
-          overflow-x: hidden;
-        }
-    
-        .div-nav {
-          align-items: center;
-          background-color: #fff;
-          display: flex;
-          text-transform: uppercase;
-          justify-content: center;
-          padding: 15px 60px;
-          max-width: 100%;
-          overflow: hidden;
-        }
-    
-        @media (max-width: 991px) {
-          .div-nav {
-            padding: 0 20px;
-          }
-        }
-    
-        .div-2-nav {
-          align-items: center;
-          display: flex;
-          width: 100%;
-          max-width: 1610px;
-          gap: 20px;
-          justify-content: space-between;
-          align-items: center;
-        }
-    
-        @media (max-width: 991px) {
-          .div-2-nav {
-            max-width: 100%;
-            flex-wrap: wrap;
-            align-items: center;
-          }
-        }
-    
-        .img-nav {
-          aspect-ratio: 2.5;
-          object-fit: auto;
-          object-position: center;
-          width: 208px;
-          align-self: stretch;
-          max-width: 100%;
-          cursor: pointer;
-        }
-    
-        .div-3-nav {
-          align-self: stretch;
-          display: flex;
-          gap: 20px;
-          font-size: 18px;
-          color: #000;
-          font-weight: 400;
-          justify-content: space-between;
-          margin: auto 0;
-          align-items: center;
-        }
-    
-        @media (max-width: 991px) {
-          .div-3-nav {
-            max-width: 100%;
-            flex-wrap: wrap;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-          }
-          .div-4-nav{
-            margin-left: 50px;
-          }
-        }
-    
-        .div-4-nav,
-        .div-5-nav,
-        .div-7-nav,
-        .div-8-nav {
-          font-family: Poppins, sans-serif;
-          white-space: nowrap;
-          cursor: pointer;
-        }
-    
-        .div-5-nav,
-        .div-6-nav,
-        .div-8-nav {
-          margin-left: 50px;
-        }
-    
-        .div-4-nav a,
-        .div-5-nav a,
-        .div-7-nav a,
-        .div-8-nav a,
-        .submenu-item a {
-          color: #333;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-        }
-    
-        .div-9-nav a {
-          color: #ffffff;
-          text-decoration: none;
-          display: block;
-        }
-    
-        .div-6-nav {
-          display: flex;
-          gap: 8px;
-          white-space: nowrap;
-          padding: 7px 0;
-          position: relative;
-        }
-    
-        .img-2-nav {
-          object-fit: auto;
-          object-position: center;
-          width: 9px;
-          margin: auto 0;
-          cursor: pointer;
-        }
-    
-        .div-9-nav {
-          justify-content: center;
-          border-radius: 10px;
-          background-color: #ec3237;
-          align-self: stretch;
-          color: #fff;
-          margin: auto 0;
-          padding: 13px 22px;
-          font: 500 22px Poppins, sans-serif;
-          cursor: pointer;
-        }
-    
-        @media (max-width: 991px) {
-          .div-9-nav {
-            padding: 20px;
-          }
-        }
-    
-        /* Submenu styles */
-        .submenu-nav {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          background-color: white;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          border-radius: 4px;
-          z-index: 1000;
-          min-width: 150px;
-          /* Ensures the submenu has enough width */
-        }
-    
-        .submenu-item {
-          padding: 10px 20px;
-          white-space: nowrap;
-          cursor: pointer;
-          font-family: Poppins, sans-serif;
-        }
-    
-        .submenu-item:hover {
-          background-color: #f1f1f1;
-        }
-    
-        .div-6-nav:hover .submenu-nav {
-          display: block;
-        }
-      </style>
-    
-      <!--Header End-->
+            <div class="nav-menu">
+                <div class="nav-item"><a href="#" class="nav-link">Home</a></div>
+                <div class="nav-item"><a href="#about-us" class="nav-link">About Us</a></div>
+                <div class="nav-item"><a href="/product.html" class="nav-link">Products</a></div>
+                <div class="nav-item"><a href="/career.html" class="nav-link">Career</a></div>
+                <div class="nav-item"><a href="#contact-us" class="nav-link">Contact</a></div>
+            </div>
+        </nav>
+    </header>
       
           <div class="div-10">
             <div class="div-11">
@@ -949,6 +767,6 @@
       font-family: Poppins, sans-serif;
     }
 </style>
-
+  <script src="/asset/js/index.js"></script>
     </body>
 </html>
